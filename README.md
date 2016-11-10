@@ -1,9 +1,11 @@
 # react-app
 
-Steps to build project
-1> Clone
-2> npm install webpack -g
-3> npm install bower -g
-4> npm install
-5> bower install
-6> npm run serve
+##Steps to build project
+```
+git clone https://github.com/GO345724/react-app.git
+npm install webpack -g
+npm install bower -g
+npm install
+bower install
+npm run serve
+```
