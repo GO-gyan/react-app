@@ -1,35 +1,25 @@
 import React, { Component } from 'react';
-import { Link, IndexLink } from 'react-router';
-import AppBar from 'material-ui/AppBar';
-import FlatButton from 'material-ui/FlatButton';
-import Footer from './pages/Footer'
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import Home from './pages/Home';
+import ContactUs from './pages/ContactUs';
+import AboutUs from './pages/AboutUs';
+import Login from './pages/Login';
+import Layout from './pages/Layout';
 
-const styles = {
-	buttonStyle: {
-        display: 'block',
-    	cursor: 'pointer',
-    	color: 'white',
-    	fontSize: '1 rem'
-	},
-	linkStyle: {
-    	textDecoration: 'none',
-    	padding: '10px 15px'
-	}
-   };
+
 
 class App extends Component {
 
 	render() {
 		return (
-			<div>
-			<AppBar title="My App">
-				<IndexLink to="/" style={styles.linkStyle}><FlatButton label="Home" style={styles.buttonStyle}/></IndexLink>
-				<Link to="contact" style={styles.linkStyle}><FlatButton label="Contact Us" style={styles.buttonStyle}/></Link>
-				<Link to="about" style={styles.linkStyle}><FlatButton label="About Us" style={styles.buttonStyle}/></Link>
-			</AppBar>
-			{this.props.children}
-			<Footer />
-			</div>
+			<Router history={hashHistory}>
+				<Route path="/" component={Layout}>
+					<IndexRoute component={Login}></IndexRoute>
+					<Route path="contact" component={ContactUs}></Route>
+					<Route path="about" component={AboutUs}></Route>
+					<Route path="home" component={Home}></Route>
+				</Route>
+			</Router>
 			)
 	}
 }
