@@ -18,7 +18,7 @@ const styles = {
    };
 
 class App extends Component {
-	
+
 	render() {
 		return (
 			<div>
@@ -27,6 +27,7 @@ class App extends Component {
 				<Link to="contact" style={styles.linkStyle}><FlatButton label="Contact Us" style={styles.buttonStyle}/></Link>
 				<Link to="about" style={styles.linkStyle}><FlatButton label="About Us" style={styles.buttonStyle}/></Link>
 			</AppBar>
+			{this.props.children}
 			<Footer />
 			</div>
 			)

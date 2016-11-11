@@ -6,7 +6,7 @@ module.exports = {
 	output: {
 		path: path.join('client', 'assets'),
 		filename: 'bundle.js',
-		publicPath: '/' 
+		publicPath: '/'
 	},
 	module: {
 		loaders: [
@@ -15,7 +15,7 @@ module.exports = {
 				loader: 'babel',
 				exclude: /node_modules/,
 				query: {
-					presets: ['es2015', 'stage-1', 'react']
+					presets: ['es2015', 'react', 'stage-1']
 				}
 			}
 		]

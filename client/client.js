@@ -11,6 +11,7 @@ import AboutUs from './components/pages/AboutUs';
 injectTapEventPlugin();
 
 render(
+	<div>
 	<MuiThemeProvider>
 	<Router history={hashHistory}>
 		<Route path="/" component={App}>
@@ -19,5 +20,5 @@ render(
 			<Route path="about" component={AboutUs}></Route>
 		</Route>
 	</Router>
-	</MuiThemeProvider>, 
+	</MuiThemeProvider></div>, 
 	document.getElementById("app"));
