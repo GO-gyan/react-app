@@ -22,11 +22,13 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-			<AppBar title="My App">
+			<AppBar title="WHIZit">
 				<IndexLink to="/" style={styles.linkStyle}><FlatButton label="Home" style={styles.buttonStyle}/></IndexLink>
 				<Link to="contact" style={styles.linkStyle}><FlatButton label="Contact Us" style={styles.buttonStyle}/></Link>
 				<Link to="about" style={styles.linkStyle}><FlatButton label="About Us" style={styles.buttonStyle}/></Link>
+				<Link to="login" style={styles.linkStyle}><FlatButton label="Sign In" style={styles.buttonStyle}/></Link>
 			</AppBar>
+			{this.props.children}
 			<Footer />
 			</div>
 			)

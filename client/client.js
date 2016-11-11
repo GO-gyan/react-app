@@ -7,6 +7,7 @@ import App from './components/App';
 import Home from './components/pages/Home';
 import ContactUs from './components/pages/ContactUs';
 import AboutUs from './components/pages/AboutUs';
+import Login from './components/pages/Login';
 
 injectTapEventPlugin();
 
@@ -17,6 +18,7 @@ render(
 			<IndexRoute component={Home}></IndexRoute>
 			<Route path="contact" component={ContactUs}></Route>
 			<Route path="about" component={AboutUs}></Route>
+			<Route path="login" component={Login}></Route>
 		</Route>
 	</Router>
 	</MuiThemeProvider>, 
